@@ -1,1 +1,11 @@
 <div>Hello jan - this is teacher app</div>
+<h1>Review pages</h1>
+<a href="bingo">Bingo</a><br />
+
+<a href="all_periods">Schedule for all periods as pdf</a><br />
+
+<h1>Maintenance pages</h1>
+{% for key,val in views.items() %}
+<a href="./admin/{{val.model.__name__.lower() }}">{{val.model.__name__}}</a
+><br />
+{% endfor %}

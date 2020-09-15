@@ -2,14 +2,14 @@ import random
 import pandas as pd
 import numpy as np
 import pdfkit
-from flask import url_for, make_response
-from thelper import APP, DB
+from flask import url_for, make_response, render_template
+from thelper import APP, DB, admin_views
 from thelper import models
 
 
 @APP.route("/")
 def hello():
-    return "hello jan. frustrated yet"
+    return render_template("index.html", views=admin_views.admin_views)
 
 
 @APP.route("/bingo")
